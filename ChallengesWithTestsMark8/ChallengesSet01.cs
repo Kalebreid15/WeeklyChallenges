@@ -8,9 +8,6 @@ namespace ChallengesWithTestsMark8
         {
             return num1 == num2;
         }
-        
-
-
 
         public double Subtract(double minuend, double subtrahend)
         {
@@ -33,22 +30,24 @@ namespace ChallengesWithTestsMark8
                 return number2;
             }
         }
-        
-        
 
         public long Multiply(long factor1, long factor2)
         {
-            return factor1 *  factor2;
+            return factor1 * factor2;
         }
 
         public string GetGreeting(string nameOfPerson)
         {
-            return ($"Hello, How are you doing {nameOfPerson}?");
+            if (string.IsNullOrEmpty(nameOfPerson))
+            {
+                return "Hello!";
+            }
+            return $"Hello, {nameOfPerson}!";
         }
 
         public string GetHey()
         {
-            return "Hey";
+            return "HEY!";
         }
     }
 }
