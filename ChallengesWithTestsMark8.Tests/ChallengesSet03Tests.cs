@@ -21,7 +21,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new bool[] { false, true, false }, true)]
         [InlineData(new bool[] { false, false }, true)]
         [InlineData(new bool[] { false }, true)]
-        //[InlineData(null, false)] // Assumption: Array will not be null
+        [InlineData(null, false)] // Assumption: Array will not be null
         public void ArrayContainsAFalse(bool[] values, bool expected)
         {
             // Arrange
