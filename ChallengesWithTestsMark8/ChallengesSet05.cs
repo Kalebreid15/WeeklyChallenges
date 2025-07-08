@@ -34,7 +34,7 @@ namespace ChallengesWithTestsMark8
 
             for (int i = 0; i < numbers.Length - 1; i++)
             {
-                if (numbers[i] >= numbers[i + 1])
+                if (numbers[i] > numbers[i + 1])
                 {
                     return false;
                 }
