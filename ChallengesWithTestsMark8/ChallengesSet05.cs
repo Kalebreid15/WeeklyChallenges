@@ -10,7 +10,7 @@ namespace ChallengesWithTestsMark8
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
             int remainder = startNumber % n;
-            int offset = remainder == 0 ? 0 : n - remainder;
+            int offset = remainder == 0 ? n : n - remainder;
             return startNumber + offset;
         }
 
