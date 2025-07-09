@@ -21,9 +21,9 @@ namespace ChallengesWithTestsMark8
                 return false;
             }
         }
-    
 
-    public bool IsNumberEven(int number)
+
+        public bool IsNumberEven(int number)
         {
             if (number % 2 == 0)
             {
@@ -50,7 +50,7 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            if (numbers == null)
+            if (numbers == null || !numbers.Any())
             {
                 return 0;
             }
@@ -95,19 +95,14 @@ namespace ChallengesWithTestsMark8
             {
                 return false;
             }
-            return numbers.Where(x => x % 2 != 0).Sum() > 0;
+
+            int sum = numbers.Sum();
+            return sum % 2 != 0;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            if (number <= 0)
-            {
-                return 0;
-            }
-            else
-            {
-                return number % 2;
-            }
+            return number > 0 ? number / 2 : 0;
         }
     }
 }
